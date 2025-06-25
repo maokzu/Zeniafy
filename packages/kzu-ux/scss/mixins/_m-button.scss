@@ -1,0 +1,12 @@
+@use '../tokens/index' as *;
+
+@mixin btn-base() {
+  padding: $space-md $space-lg;
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  border-radius: $radius-md;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}

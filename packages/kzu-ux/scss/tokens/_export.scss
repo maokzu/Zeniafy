@@ -1,0 +1,28 @@
+@use 'colors' as *;
+@use 'typography' as *;
+@use 'spacing' as *;
+
+:root {
+  // Couleurs
+  --color-primary: #{$color-primary};
+  --color-on-primary: #ffffff; // Par défaut
+
+  --color-secondary: #{$color-secondary};
+  --color-accent: #{$color-accent};
+  --color-danger: #{$color-danger};
+  --color-warning: #{$color-warning};
+  --color-info: #{$color-info};
+  --color-success: #{$color-success};
+
+  --color-bg: #{$color-bg};
+  --color-text: #{$color-text};
+
+  // Typographie
+  --font-size-base: #{$font-size-base};
+  --font-size-sm: #{$font-size-sm};
+
+  // Espacements
+  --space-sm: #{$space-sm};
+  --space-md: #{$space-md};
+  --space-lg: #{$space-lg};
+}

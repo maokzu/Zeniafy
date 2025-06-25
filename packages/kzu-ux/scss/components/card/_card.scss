@@ -1,0 +1,36 @@
+@use '../../tokens' as *;
+@use '../../mixins/m-shadow' as *;
+
+.card {
+  background-color: $color-surface;
+  border-radius: $radius-md;
+  padding: $space-md;
+  box-shadow: $shadow-md;
+
+  &.-shadow {
+    @include shadow-md;
+  }
+
+  &.-bordered {
+    border: 1px solid $color-border;
+  }
+
+  &.-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      @include shadow-lg;
+    }
+  }
+
+  &.-center {
+    text-align: center;
+  }
+
+  &.-space {
+    > * + * {
+      margin-top: $space-sm;
+    }
+  }
+}

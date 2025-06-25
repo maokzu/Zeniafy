@@ -1,0 +1,24 @@
+@use '../tokens/typography' as *;
+@use '../tokens/spacing' as *;
+@use '../tokens/colors' as *; // ✅
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: $space-md;
+  line-height: 1.6;
+  font-size: $font-size-md;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

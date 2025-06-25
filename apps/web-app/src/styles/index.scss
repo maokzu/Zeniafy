@@ -1,0 +1,26 @@
+@use '../../../../packages/kzu-ux/scss/kzuux.scss' as *;
+@use "sass:color";
+
+body {
+  background: #f9f9f9;
+  font-family: var(--font-body);
+}
+
+.layout-header,
+.layout-footer {
+  background-color: var(--color-background);
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.layout-footer {
+  border-top: 1px solid var(--color-border);
+  border-bottom: none;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem 0;
+}
+
+.layout-main {
+  padding-top: 2rem;
+}

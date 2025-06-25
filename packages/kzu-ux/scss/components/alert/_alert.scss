@@ -1,0 +1,34 @@
+@use '../../tokens' as *;
+
+.alert {
+  padding: $space-md;
+  border-radius: $radius-md;
+  font-size: $font-size-base;
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+
+  &.-info {
+    background-color: $color-info;
+    color: $color-inverted;
+    border: 1px solid $color-info;
+  }
+
+  &.-success {
+    background-color: $color-success;
+    color: $color-inverted;
+    border: 1px solid $color-success;
+  }
+
+  &.-warning {
+    background-color: $color-warning;
+    color: $color-inverted;
+    border: 1px solid $color-warning;
+  }
+
+  &.-error {
+    background-color: $color-danger;
+    color: $color-inverted;
+    border: 1px solid $color-danger;
+  }
+}

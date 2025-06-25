@@ -1,0 +1,43 @@
+@use '../../tokens' as *;
+@use '../../mixins' as *;
+
+.btn {
+  @include btn-base;
+
+  &.-solid {
+    background-color: var(--color-primary);
+    color: var(--color-on-primary);
+    border: none;
+  }
+
+  &.-outline {
+    background-color: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  &.-ghost {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: none;
+  }
+
+  // Tailles
+  &.-sm {
+    padding: $space-sm $space-md;
+    font-size: $font-size-sm;
+  }
+
+  &.-lg {
+    padding: $space-lg $space-xl;
+    font-size: $font-size-lg;
+  }
+
+  // État désactivé
+  &:disabled,
+  &.-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}
