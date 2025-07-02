@@ -1,26 +1,23 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from '../components/Layout';
+import DefaultLayout from "../layouts/DefaultLayout";
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import AllRecipes from '../features/recipes/pages/AllRecipes';
 
-
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />,
+    element: <DefaultLayout />,
     errorElement: <NotFound />,
     children: [
       {
-        index: true, // équivalent de path: ''
+        index: true,
         element: <Home />,
       },
       {
-  path: 'recettes',
-  element: <AllRecipes />
-,}
-
-      // d'autres routes ici
+        path: 'recettes', 
+        element: <AllRecipes />
+      }
     ]
   }
 ]);

@@ -1,8 +1,19 @@
-export default function AllRecipes() {
+import React from "react";
+import { mockRecipes } from "../api/mockData";
+import RecipeCard from "../components/RecipeCard";
+
+
+const AllRecipes = () => {
   return (
-    <section>
-      <h2 className="typo-h2">Mes Recettes 🍽️</h2>
-      <p className="typo-body">Voici la liste de toutes tes recettes enregistrées.</p>
-    </section>
+    <div>
+      <h1>Toutes les recettes</h1>
+      <div className="recipes-grid">
+        {mockRecipes.map((recipe) => (
+          <RecipeCard key={recipe.id} {...recipe} />
+        ))}
+      </div>
+    </div>
   );
-}
+};
+
+export default AllRecipes;
