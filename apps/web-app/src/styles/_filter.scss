@@ -1,0 +1,21 @@
+.filters-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    border: none;
+    background: #eee;
+  }
+
+  .btn-icon {
+    background: #eee;
+    border: none;
+    border-radius: 9999px;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}

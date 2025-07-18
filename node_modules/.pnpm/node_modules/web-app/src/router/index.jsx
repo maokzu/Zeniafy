@@ -3,6 +3,7 @@ import DefaultLayout from "../layouts/DefaultLayout";
 import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import AllRecipes from '../features/recipes/pages/AllRecipes';
+import RecipeDetails from "../features/recipes/pages/RecipeDetails";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
       {
         path: 'recettes', 
         element: <AllRecipes />
+      },
+      
+      {
+        path: 'recettes/:id',
+        element: <RecipeDetails />
       }
     ]
   }
